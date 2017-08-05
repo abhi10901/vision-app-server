@@ -1,0 +1,4 @@
+{
+    "dbUri": "mongodb://localhost/vision-app",
+    "jwtSecret": "jwt-secret"
+}
