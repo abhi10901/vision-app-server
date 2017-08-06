@@ -8,7 +8,7 @@ const express = require("express"),
 
 const Server = function () {
     // connect to the database and load models
-    require("./models").connect(config.dbUri);
+    // require("./models").connect(config.dbUri);
 
     this.app = express();
     this.app.use(bodyParser.urlencoded({ extended: true }));
@@ -25,12 +25,12 @@ const Server = function () {
     passport.use("local-signup", localSignupStrategy);
     passport.use("local-login", localLoginStrategy);
 
-    // pass the authentication checker middleware
-    this.app.use("/api", require("./middleware/auth-check"));
+    // // pass the authentication checker middleware
+    // this.app.use("/api", require("./middleware/auth-check"));
 
-    // routes
-    this.app.use("/auth", require("./routes/authRoutes"));
-    this.app.use("/api", require("./routes/apiRoutes"));
+    // // routes
+    // this.app.use("/auth", require("./routes/authRoutes"));
+    // this.app.use("/api", require("./routes/apiRoutes"));
 
     this.app.get("/", function (req, res) {
         res.end("Hello World");
