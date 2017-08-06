@@ -19,11 +19,11 @@ const Server = function () {
     // pass the passport middleware
     this.app.use(passport.initialize());
 
-    // load passport strategies
-    const localSignupStrategy = require("./passport/local-signup");
-    const localLoginStrategy = require("./passport/local-login");
-    passport.use("local-signup", localSignupStrategy);
-    passport.use("local-login", localLoginStrategy);
+    // // load passport strategies
+    // const localSignupStrategy = require("./passport/local-signup");
+    // const localLoginStrategy = require("./passport/local-login");
+    // passport.use("local-signup", localSignupStrategy);
+    // passport.use("local-login", localLoginStrategy);
 
     // // pass the authentication checker middleware
     // this.app.use("/api", require("./middleware/auth-check"));
